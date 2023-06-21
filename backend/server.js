@@ -6,6 +6,7 @@ const countryRoute = require("./routes/stateRoutes");
 const stateRoute = require("./routes/stateRoutes");
 const cityRouter = require("./routes/cityRoutes");
 const microlocationRouter = require("./routes/microLocationRoutes");
+const workSpaceRouter = require("./routes/workSpaceRoutes");
 require("dotenv").config();
 connectDB();
 
@@ -20,5 +21,6 @@ app.use("/api/allCountry", countryRoute);
 app.use("/api/state", stateRoute);
 app.use("/api/city", cityRouter);
 app.use("/api/microlocation", microlocationRouter);
+app.use("/api/workSpace", workSpaceRouter);
 
 app.listen(process.env.PORT, console.log("server started on 5000"));
